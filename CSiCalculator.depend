@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1743133939 source:c:\dev\csicalculator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+
