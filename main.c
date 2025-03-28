@@ -40,7 +40,7 @@ void programLoop()
 
     printf("NOTICE: ");
     printf("All inputed date will be stored as doubles. Therefore this will be very precise!\n");
-    printf("Currently the program supports these operators: \(+, -, *, /\)\n");
+    printf("Currently the program supports these operators: (+, -, *, /)\n");
     sleep(10);
     clearScreen();
 
@@ -64,7 +64,7 @@ void programLoop()
     clearScreen();
 
     // Ask for Operator Symbol:
-    printf("Now, with that in mind, what operator? \(+, -, *, /\)?\n");
+    printf("Now, with that in mind, what operator? (+, -, *, /)?\n");
     scanf(" %c", &operatorSymbol);
     sleep(1);
     clearScreen();
