@@ -51,15 +51,15 @@ void programLoop()
     clearScreen();
 
     // Ask for Right Operand:
-    printf("Understood, the first operand is %.2lf\n", leftOperand);
+    printf("Understood, the first operand is %.9lf\n", leftOperand);
     printf("Now I need the second operand, please type below:\n");
     scanf("%lf", &rightOperand);
     sleep(1);
     clearScreen();
 
     // Recap equation:
-    printf("Understood, the second operand is %.2lf\n", rightOperand);
-    printf("So, just a recap, %.2lf, and %.2lf are our operands.\n", leftOperand, rightOperand);
+    printf("Understood, the second operand is %.9lf\n", rightOperand);
+    printf("So, just a recap, %.9lf, and %.9lf are our operands.\n", leftOperand, rightOperand);
     sleep(6);
     clearScreen();
 
@@ -70,7 +70,7 @@ void programLoop()
     clearScreen();
 
     // Recap All:
-    printf("Okay, very good. So, %.2lf %c %.2lf.\n", leftOperand, operatorSymbol, rightOperand);
+    printf("Okay, very good. So, %.9lf %c %.9lf.\n", leftOperand, operatorSymbol, rightOperand);
 
     // Send Operands and Operators:
     if (!isnan(leftOperand) && !isnan(rightOperand) && (operatorSymbol == '+' || operatorSymbol == '-' || operatorSymbol == '*' || operatorSymbol == '/')) {
@@ -106,8 +106,6 @@ void clearScreen()
 // Handles calculations:
 double operation(double operand1, double operand2, char opSymbol)
 {
-    
-    /* ## TODO: Implement and Test ##
     switch(opSymbol)
     {
         case '+':
@@ -131,44 +129,6 @@ double operation(double operand1, double operand2, char opSymbol)
         default:
             // Check if the symbol is valid:
             fprintf(stderr, "INVALID OPERATOR: %c\n", opSymbol);
-            return NAN;      
-    }
-    */
-    
-    // If user sent add symbol:
-    if (opSymbol == '+')
-    {
-        return operand1 + operand2;
-    }
-    // If user sent subtract symbol:
-    else if (opSymbol == '-')
-    {
-        return operand1 - operand2;
-    }
-    // If user sent multiply symbol:
-    else if (opSymbol == '*')
-    {
-        return operand1 * operand2;
-    }
-    // If user sent divide symbol symbol:
-    else if (opSymbol == '/')
-    {
-        // Check for division by zero:
-        if (operand2 != 0)
-        {
-            return operand1 / operand2;
-        }
-        else
-        {
-            // Prevent divide by zero:
-            printf("ERROR: Division by zero is not allowed.\n");
-            return 0;
-        }
-    }
-    else
-    {
-        // Check if the symbol is valid:
-        printf("INVALID OPERATOR: %c\n", opSymbol);
-        return 0;
+            return NAN;
     }
 }
