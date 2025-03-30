@@ -106,6 +106,35 @@ void clearScreen()
 // Handles calculations:
 double operation(double operand1, double operand2, char opSymbol)
 {
+    
+    /* ## TODO: Implement and Test ##
+    switch(opSymbol)
+    {
+        case '+':
+            return operand1 + operand2;
+        case '-':
+            return operand1 - operand2;
+        case '*':
+            return operand1 * operand2;
+        case '/':
+            // Check for division by zero:
+            if (operand2 != 0)
+            {
+                return operand1 / operand2;
+            }
+            else
+            {
+                // Prevent divide by zero:
+                fprintf(stderr, "ERROR: Division by zero is not allowed.\n");
+                return NAN;
+            }
+        default:
+            // Check if the symbol is valid:
+            fprintf(stderr, "INVALID OPERATOR: %c\n", opSymbol);
+            return NAN;      
+    }
+    */
+    
     // If user sent add symbol:
     if (opSymbol == '+')
     {
