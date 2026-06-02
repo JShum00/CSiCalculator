@@ -6,7 +6,9 @@ A simple console calculator built in C using MinGW and Code::Blocks. This calcul
 
 - Support for four basic operations: addition, subtraction, multiplication, and division.
 - User-friendly prompts for entering operands and selecting operators.
+- Validates numeric input and supported operators before calculating.
 - Handles division by zero with an error message.
+- Lets you run multiple calculations without restarting the program.
 - Displays results with precision.
 
 ## Requirements
@@ -27,13 +29,20 @@ A simple console calculator built in C using MinGW and Code::Blocks. This calcul
 3. Build and run the program.
 4. Follow the on-screen prompts to input operands and an operator.
 5. The program will display the result after performing the calculation.
+6. Choose whether to run another calculation or exit.
 
 ## Compilation
 
 To compile the program, you can use the following command (if using MinGW from the terminal):
 
 ```bash
-gcc -o calculator main.c -lm
+gcc -Wall -Wextra -pedantic -std=c11 -o calculator main.c -lm
+```
+
+Run the compiled program with:
+
+```bash
+./calculator
 ```
 
 ## License
